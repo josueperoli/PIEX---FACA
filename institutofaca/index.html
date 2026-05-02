@@ -1,14 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instituição Assistencial FAÇA</title>
 </head>
 <body>
-    
-    
-    <script src="script.js"></script>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#" class="logo">
+      <div>
+        <div class="logo-icons">
+          <span class="dot-green"></span>
+          <span class="dot-yellow"></span>
+          <span class="dot-blue"></span>
+        </div>
+        <img src="images/logo.png" alt="Logo FAÇA" />
+      </div>
+      <div>
+        <span class="logo-sub">Instituição Assistencial</span>
+        <span class="logo-text">FAÇA</span>
+      </div>
+    </a>
+    <button id="menu-toggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#" class="active">Início</a></li>
+      <li><a href="#quem-somos">Quem Somos</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#impacto">Impacto</a></li>
+      <li><a href="#noticias">Notícias</a></li>
+      <li><a href="#" class="btn-doe">Doe Agora</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="images/hero.jpg"
+      alt="Transformando Vidas com Solidariedade"
+    />
+    <div class="hero-overlay">
+      <h1>Transformando Vidas<br>com <strong>Solidariedade</strong></h1>
+      <a href="#quem-somos" class="btn-primary">Saiba Mais</a>
+    </div>
+  </section>
+
+  <!-- QUEM SOMOS -->
+  <section class="quem-somos" id="quem-somos">
+    <div class="quem-somos-text">
+      <h2>Quem Somos</h2>
+      <em>Ajudando a construir um futuro melhor!</em>
+      <p>
+        Somos uma instituição sem fins lucrativos dedicada a promover
+        o bem-estar e a solidariedade em nossa comunidade, levando esperança
+        a quem mais precisa.
+      </p>
+      <a href="#" class="btn-primary">Saiba Mais</a>
+    </div>
+    <div class="quem-somos-img">
+      <img
+        src="images/quem-somos.jpg"
+        alt="Solidariedade"
+      />
+    </div>
+  </section>
+
+  <!-- NOSSOS PROJETOS -->
+  <section class="projetos" id="projetos">
+    <h2>Nossos Projetos</h2>
+    <p class="subtitle">Nossas ações que fazem a diferença</p>
+    <div class="projetos-grid">
+      <div class="projeto-card">
+        <img class="icon" src="images/icone-educacao.svg" alt="Educação" />
+        <p>Educação para Todos</p>
+      </div>
+      <div class="projeto-card">
+        <img class="icon" src="images/icone-saude.svg" alt="Saúde" />
+        <p>Apoio à Saúde</p>
+      </div>
+      <div class="projeto-card">
+        <img class="icon" src="images/icone-campanhas.svg" alt="Campanhas" />
+        <p>Campanhas Solidárias</p>
+      </div>
+    </div>
+    <a href="#" class="btn-secondary">Ver Projetos</a>
+  </section>
+
+  <!-- IMPACTO EM NÚMEROS -->
+  <section class="impacto" id="impacto">
+    <h2>Impacto em Números</h2>
+    <div class="impacto-grid">
+      <div class="impacto-item">
+        <span class="number" data-target="5000" data-suffix="+">5.000+</span>
+        <span class="label">Cestas Básicas<br>Distribuídas</span>
+      </div>
+      <div class="impacto-item">
+        <span class="number" data-target="1200">1.200</span>
+        <span class="label">Crianças<br>Educadas</span>
+      </div>
+      <div class="impacto-item">
+        <span class="number" data-target="800">800</span>
+        <span class="label">Atendimentos<br>de Saúde</span>
+      </div>
+      <div class="impacto-item">
+        <span class="number">15 Anos</span>
+        <span class="label">De<br>Solidariedade</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA VOLUNTÁRIO -->
+  <section class="voluntario" id="noticias">
+    <p class="tagline">Faça a diferença. Junte-se a nós!</p>
+    <br>
+    <a href="#" class="btn-voluntario">Seja Voluntário</a>
+  </section>
+
+  <!-- MODAL DOAÇÃO -->
+  <div id="modal-doacao" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-fechar" id="modal-fechar" aria-label="Fechar">&times;</button>
+      <h2 class="modal-titulo">Faça sua Doação</h2>
+      <p class="modal-sub">Sua contribuição transforma vidas. Escolha uma das formas abaixo:</p>
+
+      <div class="modal-metodo">
+        <span class="modal-metodo-icone">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3DBDB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/>
+          </svg>
+        </span>
+        <div>
+          <strong>PIX</strong>
+          <p>Chave CNPJ: <span class="modal-dado">00.000.000/0001-00</span></p>
+          <p>Titular: <span class="modal-dado">Instituição Assistencial FAÇA</span></p>
+        </div>
+      </div>
+
+      <div class="modal-metodo">
+        <span class="modal-metodo-icone">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3DBDB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+        </span>
+        <div>
+          <strong>Transferência Bancária</strong>
+          <p>Banco: <span class="modal-dado">001 – Banco do Brasil</span></p>
+          <p>Agência: <span class="modal-dado">0001-0</span> &nbsp;|&nbsp; Conta: <span class="modal-dado">12345-6</span></p>
+        </div>
+      </div>
+
+      <div class="modal-metodo">
+        <span class="modal-metodo-icone">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3DBDB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+          </svg>
+        </span>
+        <div>
+          <strong>Doação de Itens</strong>
+          <p>Endereço: <span class="modal-dado">Rua da Solidariedade, 123 – Centro</span></p>
+          <p>Horário: <span class="modal-dado">Seg–Sex, 8h às 17h</span></p>
+        </div>
+      </div>
+
+      <p class="modal-rodape">Dúvidas? Entre em contato: <strong>contato@faca.org.br</strong></p>
+    </div>
+  </div>
+
+      <p class="modal-rodape">Aguardamos você com muito carinho!</p>
+    </div>
+  </div>
+
 </body>
 </html>
